@@ -18,8 +18,8 @@
      <% end  %>   
 
     <% if user_signed_in? %>
-              <%= link_to 'New Listings', '#' %>
-                <%= link_to 'All Listings','#' %>
+              <%= link_to 'New Listings', new_listing_path %>
+                <%= link_to 'All Listings', listings_path%>
                 <%= link_to 'Your Listings','#' %>
                 <%= link_to 'Inbox','#' %>
                 <%= link_to 'Profile', edit_user_registration_path %>
