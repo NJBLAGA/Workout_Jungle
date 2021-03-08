@@ -56,3 +56,7 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 
 # add jquery as a bootstrap dependency
 gem 'jquery-rails'
+
+# add cloudinary gems for image uploading
+gem 'cloudinary'
+gem 'activestorage-cloudinary-service'

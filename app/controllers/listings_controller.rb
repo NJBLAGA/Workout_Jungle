@@ -30,6 +30,7 @@ end
   def create
     @listing = current_user.listings.build(listing_params)
     @listing.user = current_user
+    @listing.image.attach(params[:listing][:image])
 
     respond_to do |format|
       if @listing.save
@@ -72,6 +73,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def listing_params
-      params.require(:listing).permit(:title, :description, :price, :sold, :listing_type, :condition)
+      params.require(:listing).permit(:title, :description, :price, :sold, :listing_type, :condition, :image)
     end
 end
