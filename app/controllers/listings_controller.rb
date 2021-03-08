@@ -4,7 +4,11 @@ class ListingsController < ApplicationController
 
   # GET /listings or /listings.json
   def index
-    @listings = Listing.all.order("created_at desc")
+    if(params.has_key?(:listing_type))
+      @listings = Listing.where(listing_type: params[:listing_type]).order("created_at desc")
+    else
+      @listings = Listing.all.order("created_at desc")
+    end
   end
 
     # GET /listings or /listings.json

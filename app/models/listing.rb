@@ -8,4 +8,5 @@ has_one_attached :image
   validates :price, length: { maximum: 7 }
 
   CONDITION = %w{ New Excellent Mint Used Fair Poor }
+  LISTING_TYPES = ["Strength", "Cardio", "Boxing", "Misc"]
 end
