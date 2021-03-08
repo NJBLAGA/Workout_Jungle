@@ -30,5 +30,18 @@
   <%= @listing.listing_type %>
 </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+<p>
+  <strong>Listed by:</strong>
+<%= @listing.user.username %>
+</p>
+        
+
+
+<%= link_to 'Back to Listings', listings_path %>
+
+<%= link_to 'Back to Your Listings', own_listing_path %>
+
+
+
+
+

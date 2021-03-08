@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :listings
+  get 'listings#own', to: 'listings#own', as: 'own_listing'
+
   devise_for :users, controllers: {
     registrations: 'registrations'
   }

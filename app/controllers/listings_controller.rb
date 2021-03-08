@@ -7,6 +7,12 @@ class ListingsController < ApplicationController
     @listings = Listing.all.order("created_at desc")
   end
 
+    # GET /listings or /listings.json
+
+def own
+  @listings = current_user.listings
+end
+
   # GET /listings/1 or /listings/1.json
   def show
   end
@@ -40,7 +46,7 @@ class ListingsController < ApplicationController
   def update
     respond_to do |format|
       if @listing.update(listing_params)
-        format.html { redirect_to @listing, notice: "Listing was successfully updated." }
+        format.html { redirect_to own_listing_path, notice: "Listing was successfully updated." }
         format.json { render :show, status: :ok, location: @listing }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +59,7 @@ class ListingsController < ApplicationController
   def destroy
     @listing.destroy
     respond_to do |format|
-      format.html { redirect_to listings_url, notice: "Listing was successfully destroyed." }
+      format.html { redirect_to own_listing_path, notice: "Listing was successfully destroyed." }
       format.json { head :no_content }
     end
   end
