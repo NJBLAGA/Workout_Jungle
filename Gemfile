@@ -60,3 +60,6 @@ gem 'jquery-rails'
 # add cloudinary gems for image uploading
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
+
+# Markdown superset converter
+gem 'kramdown'
