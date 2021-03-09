@@ -40,7 +40,7 @@
 <%= @listing.user.username %>
 </p>
         
-
+<%= button_to'Add to cart', line_items_path(listing_id: @listing)%>
 
 <%= link_to 'Back to Listings', listings_path %>
 
