@@ -17,6 +17,11 @@
           <h1>Workout Jungle</h1>
      <% end  %>   
 
+      <% if user_signed_in? && current_user.admin %>
+             <%= link_to 'Admin', admins_index_path %>
+ <% else %>
+ <% end %>
+
     <% if user_signed_in? %>
               <%= link_to 'New Listings', new_listing_path %>
                 <%= link_to 'All Listings', listings_path%>
@@ -30,6 +35,8 @@
             <%= link_to "Sign In", new_user_session_path %>
             <%= link_to "Sign up", new_user_registration_path %>
             <% end %>
+
+            
 
 
     <%= yield %>
