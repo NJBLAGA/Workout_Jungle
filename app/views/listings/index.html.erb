@@ -1,47 +1,48 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listings</h1>
-<%= render 'filter' %>
+<%= render 'filter'%>
 
 <table>
   <thead>
     <tr>
       <th>Title</th>
-      <th>Descripttion</th>
+      <th>Description</th>
       <th>Condition</th>
+      <th>Listing-Type</th>
       <th>Price</th>
       <th>Sold</th>
-      <th>Listing type</th>
+      <th>Listed by</th>
+   
     </tr>
   </thead>
 
   <tbody>
-   
-     <% if user_signed_in? && current_user.admin %>
-            <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.description %></td>
-        <td><%= listing.condition %></td>
-        <td><%= listing.price %></td>
-        <td><%= listing.sold %></td>
-        <td><%= listing.listing_type %></td>
-        <td><%= link_to 'Show', listing %></td>
-         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
- <% else %>
+   <% if user_signed_in? && current_user.admin %>
+      <% @listings.each do |listing| %>
+    <tr>
+      <td><%= listing.title%></td>
+      <td><%= listing.description%></td>
+      <td><%= listing.condition%></td>
+      <td><%= listing.listing_type%></td>
+      <td><%= listing.price%></td>
+      <td><%= listing.sold%></td>
+      <td><%= listing.user.username %></td>
+      <td><%= link_to 'Show', listing%></td>
+      <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      <% end %>
+  <% else %>
   <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.description %></td>
-        <td><%= listing.condition %></td>
-        <td><%= listing.price %></td>
-        <td><%= listing.sold %></td>
-        <td><%= listing.listing_type %></td>
-        <td><%= link_to 'Show', listing %></td>
-    <% end %>
- <% end %>
-   
+    <tr>
+      <td><%= listing.title %></td>
+      <td><%= listing.description %></td>
+      <td><%= listing.condition %></td>
+      <td><%= listing.price %></td>
+      <td><%= listing.sold %></td>
+      <td><%= listing.listing_type %></td>
+      <td><%= link_to 'Show', listing %></td>
+      <% end %>
+  <% end %> 
   </tbody>
 </table>
 
