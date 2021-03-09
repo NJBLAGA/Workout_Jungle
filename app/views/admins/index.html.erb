@@ -1,0 +1,14 @@
+<!-- users/index.html.erb -->
+ <h1>Admin Dashboard:</h1>
+ <h2>Current Users:</h2>
+   <% @users.each do |user| %>
+     <% if user.admin?  %>
+        <%= user.username %> <br>
+        <% else %>
+        <%= user.username %>
+        <%= link_to "Remove User", admins_destroy_url(user), method: :delete, data: { confirm: "Really delete this user?" }%>
+     <% end %>
+   <% end %>
+
+
+

@@ -16,7 +16,21 @@
   </thead>
 
   <tbody>
-    <% @listings.each do |listing| %>
+   
+     <% if user_signed_in? && current_user.admin %>
+            <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.title %></td>
+        <td><%= listing.description %></td>
+        <td><%= listing.condition %></td>
+        <td><%= listing.price %></td>
+        <td><%= listing.sold %></td>
+        <td><%= listing.listing_type %></td>
+        <td><%= link_to 'Show', listing %></td>
+         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+ <% else %>
+  <% @listings.each do |listing| %>
       <tr>
         <td><%= listing.title %></td>
         <td><%= listing.description %></td>
@@ -26,6 +40,8 @@
         <td><%= listing.listing_type %></td>
         <td><%= link_to 'Show', listing %></td>
     <% end %>
+ <% end %>
+   
   </tbody>
 </table>
 

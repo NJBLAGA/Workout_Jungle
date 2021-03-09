@@ -64,8 +64,13 @@ end
   def destroy
     @listing.destroy
     respond_to do |format|
-      format.html { redirect_to own_listing_path, notice: "Listing was successfully destroyed." }
-      format.json { head :no_content }
+      if user_signed_in? && current_user.admin
+        format.html { redirect_to @listing, notice: "Listing was successfully destroyed." }
+        format.json { head :no_content }
+      else 
+        format.html { redirect_to own_listing_path, notice: "Listing was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
   end
 
