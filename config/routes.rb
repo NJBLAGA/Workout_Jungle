@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   devise_for :admins, controllers: {
     admins: 'admins'
   }
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   root 'jungle#index'
   get "admins", to: "admins#index", as: 'admins_index'
   delete "admins/:id", to: "admins#destroy", as: 'admins_destroy'
+  put "admins/:id", to: "admins#assign", as: 'assign_admin'
   
   
   resources :listings

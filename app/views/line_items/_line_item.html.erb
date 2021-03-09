@@ -1,0 +1,13 @@
+
+<%= line_item.quantity %>
+<br>
+<%= line_item.listing.title %>
+<br>
+<%= truncate(line_item.listing.description, length: 150) %>
+<br>
+<%= number_to_currency(line_item.total_price) %>
+<br>
+<%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
+
+
+<hr/>

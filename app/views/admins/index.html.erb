@@ -6,9 +6,11 @@
         <%= user.username %> <br>
         <% else %>
         <%= user.username %>
+         <%= link_to 'Make User Admin', assign_admin_url(user), method: :put, data: { confirm: "Assign User Admin Status" } %>
         <%= link_to "Remove User", admins_destroy_url(user), method: :delete, data: { confirm: "Really delete this user?" }%>
      <% end %>
    <% end %>
+
 
 
 

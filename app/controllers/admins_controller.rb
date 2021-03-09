@@ -9,4 +9,11 @@ class AdminsController < ApplicationController
       redirect_to admins_index_path, notice: 'User Deleted.'
     end
 
+    def assign
+      @user = User.find(params[:id])
+      @user.admin = true
+      @user.save
+      redirect_to admins_index_path, notice: 'User is now an Admin.'
+    end
+
 end
