@@ -1,21 +1,53 @@
-<%= link_to root_path do %>
-    <h1>Workout Jungle</h1>
-<% end  %>   
+<nav class="navbar navbar-dark bg-dark">
 
-<% if user_signed_in? && current_user.admin %>
-    <%= link_to 'Admin', admins_index_path %>
-<% else %>
-<% end %>            
-          
-<% if user_signed_in? %>
-    <%= link_to 'New Listings', new_listing_path %>
-    <%= link_to 'All Listings', listings_path%>
-    <%= link_to 'Your Listings', own_listing_path%>
-    <%= link_to 'Cart', cart_path(@cart) %>
-    <%= link_to 'Inbox', conversations_path %>
-    <%= link_to 'Profile', edit_user_registration_path %>
-    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-<% else %>
-    <%= link_to "Sign In", new_user_session_path %>
-    <%= link_to "Sign up", new_user_registration_path %>
-<% end %>
+  <div class="container-fluid" id="bootstrap-overrides">
+    <a class="navbar-brand"><%= link_to "Workout Jungle", root_path%></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+       <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to 'Post New Listing', new_listing_path%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to 'All Current Listings', listings_path%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to 'Your Current Listings', own_listing_path%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to 'Shopping Cart', cart_path(@cart)%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to 'Inbox', conversations_path%></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+             <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item"><%= link_to 'Edit Profile', edit_user_registration_path%></a></li>
+            <li><a class="dropdown-item"><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <% if user_signed_in? && current_user.admin %>
+            <li><a class="dropdown-item"><%= link_to 'Admin Dashboard', admins_index_path%></a></li>
+             <% else %>
+      <% end %> 
+          </ul>
+        </li>
+      <% else %> 
+          <li class="nav-item">
+          <a class="nav-link"><%= link_to "Sign In", new_user_session_path%></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link"><%= link_to "Sign up", new_user_registration_path%></a>
+        </li>
+      </ul>
+      <% end %>  
+    </div>
+  </div>
+</nav>
+
