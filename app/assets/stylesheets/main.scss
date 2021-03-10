@@ -1,0 +1,16 @@
+
+ @import "bootstrap";
+
+#bootstrap-overrides  a {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #343a40 ;
+    border: none;
+}
+
