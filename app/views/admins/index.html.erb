@@ -1,16 +1,17 @@
 <!-- users/index.html.erb -->
- <h1>Admin Dashboard:</h1>
- <h2>Current Users:</h2>
-   <% @users.each do |user| %>
-     <% if user.admin?  %>
-        <%= user.username %> <br>
-        <% else %>
-        <%= user.username %>
-         <%= link_to 'Make User Admin', assign_admin_url(user), method: :put, data: { confirm: "Assign User Admin Status" } %>
-        <%= link_to 'Remove User', admins_destroy_url(user), method: :delete, data: { confirm: "Really delete this user?" }%>
-     <% end %>
-   <% end %>
-
-
-
+ <h1 id="admin4">Admin Dashboard</h1>
+    <ul class="list-group list-group-flush">
+    <% @users.each do |user| %>
+      <% if user.admin?  %>
+      <li class="list-group-item"id="admin2"> <%= user.username %> <br></li>
+    <% else %>
+      <li class="list-group-item"id="admin2"> <%= user.username %>  
+  <br>
+      <button type="button" class="btn btn-primary btn-sm" id="admin"><%= link_to 'Make Admin', assign_admin_url(user), method: :put, data: { confirm: "Assign User Admin Status" } %></button>
+      <button type="button" class="btn btn-primary btn-sm" id="admin"><%= link_to 'Remove User', admins_destroy_url(user), method: :delete, data: { confirm: "Really delete this user?" }%></button>
+  <br>
+      </li>
+      <% end %>
+    <% end %> 
+</ul>
 
