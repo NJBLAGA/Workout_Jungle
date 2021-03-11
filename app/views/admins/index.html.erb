@@ -2,7 +2,7 @@
  <h1 id="admin4">Admin Dashboard</h1>
     <ul class="list-group list-group-flush">
     <% @users.each do |user| %>
-      <% if user.admin?  %>
+      <% if user.admin?%>
       <li class="list-group-item"id="admin2"> <%= user.username %><br></li>
     <% else %>
       <li class="list-group-item"id="admin2"><%= user.username %><br>
