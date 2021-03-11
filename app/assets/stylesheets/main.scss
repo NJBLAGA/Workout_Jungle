@@ -72,15 +72,7 @@ bootstrap-overrides2:hover {
 }
 
 #bootstrap-overrides6 {
-    font-size: 12px;
-    font-family: sans-serif;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#bootstrap-overrides7 {
-    font-size: 10px;
+    font-size: 80%;
     font-family: sans-serif;
     color: black;
     font-weight: bold;
@@ -89,7 +81,7 @@ bootstrap-overrides2:hover {
 
 #notice {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 1%;
     font-family: sans-serif;
     color: black;
     font-weight: bold;
@@ -97,7 +89,42 @@ bootstrap-overrides2:hover {
 }
 
 
+#admin a{
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    max-width: 30%;
+}
 
+#admin2 {
+    text-align: center;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#admin3 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#admin4 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    text-decoration: none;
+
+}
 
 
   
