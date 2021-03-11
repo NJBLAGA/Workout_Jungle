@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
+
   root 'jungle#index'
   get "admins", to: "admins#index", as: 'admins_index'
   delete "admins/:id", to: "admins#destroy", as: 'admins_destroy'

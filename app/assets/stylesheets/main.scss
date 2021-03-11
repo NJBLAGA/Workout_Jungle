@@ -2,7 +2,7 @@
  @import "bootstrap";
 
 #bootstrap-overrides  a {
-    font-size: 1.5rem;
+        font-size: 1.8rem;
     font-family: sans-serif;
     color: white;
     font-weight: 600;
@@ -14,3 +14,90 @@
     border: none;
 }
 
+  
+.navbar-nav .dropdown-menu {
+    background-color: #343a40 ;
+    border: none;
+}
+
+#bootstrap-overrides2  a {
+    font-weight: bold;
+    text-decoration: none;
+}  
+
+bootstrap-overrides2:link {
+    text-decoration: none;
+  }
+  
+  
+bootstrap-overrides2:visited {
+      text-decoration: none;
+    }
+  
+  
+bootstrap-overrides2:hover {
+      text-decoration: none;
+    }
+
+#bootstrap-overrides3 {
+    background: linear-gradient(-45deg, #36b5e4, #2ce6ba);
+    animation: gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #36b5e4, #2ce6ba);
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bootstrap-overrides4 a {
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bootstrap-overrides4.btn-secondary {
+    border-style: solid;
+    background-color: #343a40 ;
+    background-color: #343a40 ;
+}
+
+
+#bootstrap-overrides5  {
+    max-width: 70%;
+    align-self: center;
+    margin: auto;
+   
+   
+}
+
+#bootstrap-overrides6 {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bootstrap-overrides7 {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#notice {
+    text-align: center;
+    margin-top: 5%;
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+
+  

@@ -1,2 +1,26 @@
-<h1>Equip The Beast Within</h1>
+<div class="card text-center" id="bootstrap-overrides5">
+  <div class="card-header" id="bootstrap-overrides3">
+    Equip The Beast Within...
+  </div>
+  <div class="card-body" id="bootstrap-overrides5">
+    <h5 class="card-title" id="bootstrap-overrides6"></h5>
+    <p class="card-text" id="bootstrap-overrides7">Welcome Message....<br> Disclaimer (Terms and conditions)</p>
+    <a>
+    <% if user_signed_in? %>
+<br>
+<br>
+<% else %> 
+<button type="button" class="btn btn-secondary" id="bootstrap-overrides4"><%= link_to "Sign In", new_user_session_path%></button>
+<button type="button" class="btn btn-secondary" id="bootstrap-overrides4"><%= link_to "Sign up", new_user_registration_path%></button>
+ <% end %>  
+    </a>
+  </div>
+   <div class="card-header" id="bootstrap-overrides3">
+    Workout Jungle 2021
+  </div>
+</div>
+
+
+
+
 
