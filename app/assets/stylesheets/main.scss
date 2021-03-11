@@ -1,4 +1,3 @@
-
  @import "bootstrap";
 
 #bootstrap-overrides  a {
@@ -27,17 +26,17 @@
 
 bootstrap-overrides2:link {
     text-decoration: none;
-  }
+}
   
   
 bootstrap-overrides2:visited {
       text-decoration: none;
-    }
+}
   
   
 bootstrap-overrides2:hover {
       text-decoration: none;
-    }
+}
 
 #bootstrap-overrides3 {
     background: linear-gradient(-45deg, #36b5e4, #2ce6ba);
@@ -66,9 +65,7 @@ bootstrap-overrides2:hover {
 #bootstrap-overrides5  {
     max-width: 70%;
     align-self: center;
-    margin: auto;
-   
-   
+    margin: auto; 
 }
 
 #bootstrap-overrides6 {
@@ -182,8 +179,7 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
     font-size: 1rem;
-    }
-
+}
 
 #mess1 {
     text-align: center;
@@ -192,7 +188,7 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
     font-size: 2rem;
-  }
+}
 
   #mess2 {
     font-size: 1rem;
@@ -200,18 +196,19 @@ bootstrap-overrides2:hover {
     color: rgb(12, 12, 12);
     font-weight: bold;
     text-decoration: none;
-  }
+}
 
   #mess3 {
   font-size: 0.6rem;
   font-family: sans-serif;
   color: rgb(12, 12, 12);
   text-decoration: none;
- }
+}
 
  #mess5 {
     text-align: center;
- }
+}
+
  #mess5 a {
     text-align: center;
     font-family: sans-serif;
@@ -219,12 +216,50 @@ bootstrap-overrides2:hover {
     font-size: 1rem;
 }
 
- #mess4 .input-group-text {
+#mess4 .input-group-text {
      margin: auto;
 
- }
+}
+
+#newl1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#new12 {
+    max-width: 80%;
+    align-self: center;
+    margin: auto; 
+}
+
+#new13 btn btn-primary{
+  justify-self: center;
+}
+
+#newl4 a {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+}
 
 
+#newl3 {
+    text-align: center;
+}
 
+#newl5 {
+    text-align: left;
+}
 
-  
+#newl6 {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}  
