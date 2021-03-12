@@ -8,15 +8,17 @@
 
 user = User.new(
     username: "Admin1",
-    email: "admin@test.com",
+    email: "
+    ",
     password: "1234567",
     password_confirmation: "1234567",
     admin: true
   )
+  user.save!
 
   user = User.new(
     username: "Admin2",
-    email: "admin2@test.com",
+    email: "admin2@admin.com",
     password: "1234567",
     password_confirmation: "1234567",
     admin: true

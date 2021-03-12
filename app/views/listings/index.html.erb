@@ -26,7 +26,6 @@
       <td><%= listing.condition%></td>
       <td><%= listing.listing_type%></td>
       <td><%= listing.price%></td>
-      <td><%= listing.sold%></td>
       <td><%= listing.user.username %></td>
       <td><%= link_to 'Show', listing%></td>
       <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }%></td>
@@ -38,7 +37,6 @@
       <td><%= listing.description %></td>
       <td><%= listing.condition %></td>
       <td><%= listing.price %></td>
-      <td><%= listing.sold %></td>
       <td><%= listing.listing_type %></td>
       <td><%= link_to 'Show', listing %></td>
       <% end %>
