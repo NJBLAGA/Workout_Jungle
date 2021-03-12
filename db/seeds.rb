@@ -13,4 +13,12 @@ user = User.new(
     password_confirmation: "1234567",
     admin: true
   )
+
+  user = User.new(
+    username: "Admin2",
+    email: "admin2@test.com",
+    password: "1234567",
+    password_confirmation: "1234567",
+    admin: true
+  )
   user.save!
