@@ -48,6 +48,10 @@ bootstrap-overrides2:hover {
     text-decoration: none;
 }
 
+#bootstrap-size{
+    font-size: 0.5rem;
+}
+
 #bootstrap-overrides4 a {
     font-family: sans-serif;
     color: white;
@@ -55,17 +59,22 @@ bootstrap-overrides2:hover {
     text-decoration: none;
 }
 
-#bootstrap-overrides4.btn-secondary {
-    border-style: solid;
-    background-color: #343a40 ;
-    background-color: #343a40 ;
+#bootstrap-overrides5  {
+    max-width: 80%;
+    align-self: center;
+    margin: auto; 
+    margin-bottom: 5%;
+}
+
+#bootstrap-overrides5 p  {
+    text-align: center;
+    font-size: x-small;
 }
 
 
-#bootstrap-overrides5  {
-    max-width: 70%;
-    align-self: center;
-    margin: auto; 
+#li-steps {
+    text-align: left;
+    font-size: x-small;
 }
 
 #bootstrap-overrides6 {
@@ -85,8 +94,11 @@ bootstrap-overrides2:hover {
     text-decoration: none;
 }
 
+#admin  {
+    margin-top: 1%;
+}
 
-#admin a{
+#admin a {
     font-family: sans-serif;
     color: white;
     font-weight: bold;
@@ -154,6 +166,15 @@ bootstrap-overrides2:hover {
     font-size: 1.5rem;
 }
 
+#formb  .btn {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(243, 236, 236);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
 #con1 {
     text-align: center;
     font-family: sans-serif;
@@ -172,6 +193,23 @@ bootstrap-overrides2:hover {
     font-size: 1rem;
 }
 
+#signcol {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(243, 236, 236);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#signcol .btn {
+    text-align: center;
+    font-family: sans-serif;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
 #con3 a{
     text-align: center;
     font-family: sans-serif;
@@ -179,6 +217,11 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
     font-size: 1rem;
+}
+
+#messall {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #mess1 {
@@ -190,19 +233,26 @@ bootstrap-overrides2:hover {
     font-size: 2rem;
 }
 
-  #mess2 {
+#mess2 {
     font-size: 1rem;
     font-family: sans-serif;
-    color: rgb(12, 12, 12);
+    color: rgb(20, 126, 224);
     font-weight: bold;
     text-decoration: none;
 }
 
-  #mess3 {
+#mess3 {
   font-size: 0.6rem;
   font-family: sans-serif;
   color: rgb(12, 12, 12);
   text-decoration: none;
+}
+
+#mess4 .input-group-text {
+    margin: auto;
+    align-items: center;
+    background-color: none;
+
 }
 
  #mess5 {
@@ -214,11 +264,6 @@ bootstrap-overrides2:hover {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1rem;
-}
-
-#mess4 .input-group-text {
-     margin: auto;
-
 }
 
 #newl1 {
@@ -240,15 +285,26 @@ bootstrap-overrides2:hover {
   justify-self: center;
 }
 
-#newl4 a {
-    font-family: sans-serif;
-    color: white;
-    text-decoration: none;
-}
-
-
 #newl3 {
     text-align: center;
+    margin-bottom: 2%;
+}
+
+#newl4 {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(243, 237, 237);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#newl4 a{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(243, 237, 237);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 #newl5 {
@@ -263,3 +319,210 @@ bootstrap-overrides2:hover {
     position: absolute;
     top: 50%;
 }  
+
+#list1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#list2  {
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    align-content:center;
+}
+
+#list3  a{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(243, 237, 237);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+#border {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;  
+    border: black;
+    border-radius: 1px;
+}
+
+#listing_card {
+    width: 10rem;
+    height: 5rem;   
+    margin-bottom: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+
+img {
+    max-width: 100%;
+    width: 100%;   
+  }
+}
+
+  #listing_card_show {
+    width: 90%;
+    height: 60%rem;   
+    margin-bottom: 12rem;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+  
+img {
+    max-width: 40%;
+    width: 40%; 
+    max-height: 50%;
+    height: 50%;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+p {
+    font-size: small;
+
+  }
+
+#button_group {
+      margin: auto;
+      margin-bottom: 1%;
+  }
+
+#button_ele {
+    text-align: center;
+    font-family: sans-serif;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.5rem;
+}
+
+#button_ele a {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(252, 244, 244);
+    font-weight: bold;
+    font-size: 0.5rem;
+}
+}
+
+#body_font.card-body {
+    font-size: 1%;
+    padding: 1%;
+    max-height: 40%;
+    height: 40%;
+}
+
+#body_font.list-group-item {
+    font-size: 1%;
+    padding: 1%;
+    max-height: 40%;
+    height: 40%;
+}
+
+#tag_font  {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tag_font a {
+    font-weight: 800;
+    font-size: 0.7rem;
+    margin-top: 5%;
+}
+
+#size a{
+    font-size: x-large;
+}
+
+#cart_button input {
+    text-align: left;
+    font-family: sans-serif;
+    color: #050505;
+    font-weight: bold;
+    font-size: 0.5rem;
+    margin-bottom: 2%;
+}
+
+#cart_line{
+    width: 10rem;
+    height: 10rem;   
+    margin-bottom: 12rem;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cart_img{
+    width: 10rem;
+    height: 10rem;   
+    margin-bottom: 12rem;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  
+img {
+    max-width: 100%;
+    width: 100%; 
+    max-height: 100%;
+    height: 100%;  
+  }
+
+}
+
+#line_item_size {
+    width: 90%;
+   margin: auto;
+}
+
+#line_item_price {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(252, 244, 244);
+    font-weight: bold;
+    font-size: 1rem;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#rem_item {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;  
+}
+
+#cart_total p {
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+#em_cart{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;   
+}
+
+#em_cart input {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(12, 11, 11);
+    font-weight: bold;
+    font-size: 1rem;   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+
+
