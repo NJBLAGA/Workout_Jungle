@@ -1,3 +1,4 @@
+ <article id="messall">
 <h1 id="con1">Conversations</h1>
   <% @users.each do |user| %>
    <% if user.id != current_user.id && User.exists?(user.id)%>
@@ -9,4 +10,5 @@
     <% end %>
   <% end %>
 </ul>
+</article>
 

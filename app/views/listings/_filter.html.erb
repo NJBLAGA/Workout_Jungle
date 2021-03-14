@@ -1,25 +1,11 @@
-<nav class="panel">
-  <p>Filter by Listing Type:</p>
 
-  <ul>
-    <li>
-      <%= link_to 'All',listings_path %>
-    </li>
-
-    <li>
-      <%= link_to 'Strength', listings_path(listing_type: "Strength")%>
-    </li>
-
-    <li>
-      <%= link_to 'Cardio', listings_path(listing_type: "Cardio")%>
-    </li>
-
-    <li>
-      <%= link_to 'Boxing', listings_path(listing_type: "Boxing")%>
-    </li>
-
-    <li>
-      <%= link_to 'Misc', listings_path(listing_type: "Misc")%>
-    </li>
-  </ul>
-</nav>
+<div id="list2">
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'All',listings_path %></button>
+  <button type="button" class="btn btn-primary" id="list3"><%= link_to 'Strength', listings_path(listing_type: "Strength")%></button>
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'Cardio', listings_path(listing_type: "Cardio")%></button>
+  <button type="button" class="btn btn-primary" id="list3"><%= link_to 'Boxing', listings_path(listing_type: "Boxing")%></button>
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'Misc.', listings_path(listing_type: "Misc")%></button>
+ </div>
+  </div>
+ 

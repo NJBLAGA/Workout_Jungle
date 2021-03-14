@@ -1,39 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Your Listings</h1>
-<%= render 'filter' %>
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Condition</th>
-      <th>Listing-Type</th>
-      <th>Price</th>
-      <th>Sold</th>
-      <th>Listed by</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.title%></td>
-        <td><%= listing.description%></td>
-        <td><%= listing.condition%></td>
-        <td><%= listing.listing_type%></td>
-        <td><%= listing.price%></td>
-        <td><%= listing.user.username %></td>
-        <td><%= link_to 'Show', listing  %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-     </tr>  
-    <% end %>
-    <%= link_to 'New Listing', new_listing_path %>
-  </tbody>
-</table>
+<h1 id="list1"> My Listings</h1>
+<%= render 'filter'%>
+<br>
+<div id="border">
+  <% @listings.each do |listing| %>
+  <main class="card" id='listing_card'>
+  <img> <%=  image_tag listing.image%>
+  <div class="card-body" id="body_font">
+  <ul class="list-group list-group-flush" id="body_font">
+    <li class="list-group-item" id="body_font"><strong>Title:</strong> <%= listing.title%></li>
+    <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
+    <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+    <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
+  </ul>
+  <div id="tag_font">
+    <a class="card-link" id="body_font"><%= link_to 'Show', listing%></a>
+    <a class="card-link" id="body_font"> <td><%= link_to 'Edit', edit_listing_path(listing) %></td></a>
+    <a class="card-link" id="body_font"><%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }%></a>
+</div> 
+</main>
+  <% end %>
+</div>
 
 

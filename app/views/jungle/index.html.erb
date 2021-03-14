@@ -3,20 +3,40 @@
     Equip The Beast Within...
   </div>
   <div class="card-body" id="bootstrap-overrides5">
-    <h5 class="card-title" id=></h5>
-    <p class="card-text" id="bootstrap-overrides6">Welcome Message....<br> Disclaimer (Terms and conditions)</p>
-    <a>
+    <h5 class="card-title" id=>
+    <p class="card-text" id="bootstrap-overrides6">
+    Welcome to Workout Jungle
+    <br> 
+    The ultimate Australian workout marketplace!
+    </h5>
+    <h5 class="card-title" id=>
+    <p class="card-text" id="bootstrap-overrides7">
+    </h5>
+   <ol id="li-steps"><strong>Start now with 4 easy steps!</strong>
+    <li>Create an account</li>
+    <li>Browse our listings of new and used gym equipment or sell your own</li>
+    <li>Add listings to your Wish List</li>
+    <li>Message the seller, make an offer and start building your ultimate gym experience</li> 
+   </ol>     
+    <ol id="li-steps"><strong>Terms and Conditions</strong>
+    <li>Be respectful to admin and fellow users </li>
+    <li> Do not engage, prescribe or perform illegal activities</li>
+    <li>Uphold honest intentions towards all users</li>
+    <li>Do not post listings of false nature</li> 
+    <br>
+      <strong>Any violation of the above terms and conditions will result in immediate cancellation of your account and may result in legal action.</strong>
+  </ol>  
     <% if user_signed_in? %>
 <br>
 <br>
 <% else %> 
-<button type="button" class="btn btn-secondary" id="bootstrap-overrides4"><%= link_to "Sign In", new_user_session_path%></button>
-<button type="button" class="btn btn-secondary" id="bootstrap-overrides4"><%= link_to "Sign up", new_user_registration_path%></button>
- <% end %>  
+<button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to "Sign In", new_user_session_path%></button>
+<button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to "Sign Up", new_user_registration_path%></button>
+<% end %>  
     </a>
   </div>
    <div class="card-header" id="bootstrap-overrides3">
-    Workout Jungle 2021
+    <a id="bootstrap-size">Workout Jungle 2021</a>
   </div>
 </div>
 

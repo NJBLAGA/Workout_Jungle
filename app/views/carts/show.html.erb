@@ -1,13 +1,17 @@
-<hr>
-<% if total_cart_items %>            
-    <span>Current Cart:<%= cart_count_over_one %></span>
+<% if total_cart_items %>  
+<h1 id="list1"> <span>Wish List Items: <%= cart_count_over_one %></span></h1>
+<h2 id='mess5'><%= link_to 'Keep Shopping', listings_path%></h2>        
 <% end %>
-<br>
-<%= link_to 'Keep Shopping', listings_path%>
-<br>
-<hr />
 <%= render(@cart.line_items) %>
-<%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }%>
+
+
+
+  <article class="btn btn-success" id="line_item_price">Wish List Total: <%= number_to_currency(@cart.total_price)%></article>
 <br>
-<span>Total:</span> <%= number_to_currency(@cart.total_price) %>
+<br>
+   <div id="em_cart"><%= button_to 'Delete List', @cart, method: :delete, data: { confirm: "Are you sure? " }%></div>
+
+
+
+
       

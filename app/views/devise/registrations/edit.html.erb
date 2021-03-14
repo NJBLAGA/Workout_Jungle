@@ -1,5 +1,5 @@
 <div id="forms1">
-<h2 id="forms2">Edit Profile: <%= current_user.username %></h2>
+<h2 id="forms2">Change Password: <%= current_user.username %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -11,25 +11,25 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
+    <%= f.input :current_password,
+                hint: "",
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
     <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
+                hint: "Enter new password",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
     </div>
   <div class="form-actions" id="forms3">
-    <%= f.button :submit, "Update" %>
+    <button type="button" class="btn btn-primary" id="formb"> <%= f.button :submit, "Update" %></button>
   </div>
 <% end %>   
 
 <br>
  
-<div id="forms4"><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+<div id="forms4"><%= link_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
 
 

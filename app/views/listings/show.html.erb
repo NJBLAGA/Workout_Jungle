@@ -1,45 +1,30 @@
-<p id="notice"><%= notice %></p>
+    <h1 id="list1"><%= @listing.title %></h1> 
+<div class="card mb-3" id='listing_card_show'>
+  <img class="card-img-top"> <%= image_tag @listing.image%>
+  <div class="card-body">
+    <p class="card-text"><strong>Description: </strong><%=@listing.description%></p>
+       <p class="card-text"><strong>Condition: </strong><%= @listing.condition%></p>
+          <p class="card-text"><strong>Listing Type: </strong><%= @listing.listing_type%></p>
+             <p class="card-text"><strong>Asking Price: </strong>$<%= @listing.price%></p>
+                <p class="card-text"><strong>Listed By: </strong><%= @listing.user.username%>
+                 <div id="cart_button"><%= button_to'Add To Wish List', line_items_path(listing_id: @listing)%></div>
+  </div>
+  <div  id="button_group">
+  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to 'Message User', conversations_path%></button>
+  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'All Listings', listings_path%></button>
+  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'My Listings', own_listing_path%></button>
+</div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @listing.title %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @listing.image%>
-</p>
 
-<p>
-  <strong>Descripttion:</strong>
-  <%= @listing.description %>
-</p>
 
-<p>
-  <strong>Descripttion:</strong>
-  <%= @listing.condition %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
 
-<p>
-  <strong>Listing type:</strong>
-  <%= @listing.listing_type %>
-</p>
 
-<p>
-  <strong>Listed by:</strong>
-<%= @listing.user.username %>
-</p>
-        
-<%= button_to'Add to cart', line_items_path(listing_id: @listing)%>
 
-<%= link_to 'Back to Listings', listings_path %>
 
-<%= link_to 'Back to Your Listings', own_listing_path %>
+
 
 
 
