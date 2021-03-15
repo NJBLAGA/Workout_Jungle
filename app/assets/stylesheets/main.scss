@@ -49,7 +49,7 @@ bootstrap-overrides2:hover {
 }
 
 #bootstrap-size{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 #bootstrap-overrides4 a {
@@ -62,19 +62,25 @@ bootstrap-overrides2:hover {
 #bootstrap-overrides5  {
     max-width: 80%;
     align-self: center;
-    margin: auto; 
-    margin-bottom: 5%;
+    margin: auto;   
 }
 
 #bootstrap-overrides5 p  {
     text-align: center;
-    font-size: x-small;
+    font-size: medium;
 }
-
 
 #li-steps {
     text-align: left;
-    font-size: x-small;
+    font-size: xx-small;
+}
+
+#li-steps {
+   
+    @media only screen and (min-width: 1300px){
+    text-align: left;
+    font-size: medium;
+    }
 }
 
 #bootstrap-overrides6 {
@@ -83,6 +89,10 @@ bootstrap-overrides2:hover {
     color: black;
     font-weight: bold;
     text-decoration: none;
+}
+
+#bootstrap-overrides7 {
+    padding: none;
 }
 
 #notice {
@@ -345,7 +355,6 @@ bootstrap-overrides2:hover {
     font-size: 1rem;
 }
 
-
 #border {
     display: flex;
     flex-wrap: wrap;
@@ -358,7 +367,7 @@ bootstrap-overrides2:hover {
 #listing_card {
     width: 10rem;
     height: 5rem;   
-    margin-bottom: 12rem;
+    margin-bottom: 14rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -366,6 +375,18 @@ img {
     max-width: 100%;
     width: 100%;   
   }
+}
+
+
+#listing_card  {
+   
+    @media only screen and (min-width: 1300px){
+    width: 20rem;
+    height: 15rem;   
+    margin-bottom: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 
   #listing_card_show {
@@ -378,17 +399,17 @@ img {
     border: none;
   
 img {
-    max-width: 40%;
-    width: 40%; 
-    max-height: 50%;
-    height: 50%;  
+    max-width: 70%;
+    width: 70%; 
+    max-height: 70%;
+    height: 70%;  
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
 p {
-    font-size: small;
+    font-size: medium;
 
   }
 
@@ -410,8 +431,33 @@ p {
     font-family: sans-serif;
     color: rgb(252, 244, 244);
     font-weight: bold;
-    font-size: 0.5rem;
+    font-size: small;
+    }
 }
+
+#listing_card_show img   {
+   
+    @media only screen and (min-width: 1300px){
+        max-width: 40%;
+        width: 40%; 
+        max-height: 40%;
+        height: 40%;  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+#button_ele a {
+   
+    @media only screen and (min-width: 1300px){
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(252, 244, 244);
+    font-weight: bold;
+    font-size: medium;
+    }
 }
 
 #body_font.card-body {
@@ -422,7 +468,7 @@ p {
 }
 
 #body_font.list-group-item {
-    font-size: 1%;
+    font-size: medium;
     padding: 1%;
     max-height: 40%;
     height: 40%;
@@ -435,8 +481,9 @@ p {
 
 #tag_font a {
     font-weight: 800;
-    font-size: 0.7rem;
+    font-size: medium;
     margin-top: 5%;
+
 }
 
 #size a{
@@ -448,8 +495,20 @@ p {
     font-family: sans-serif;
     color: #050505;
     font-weight: bold;
-    font-size: 0.5rem;
+    font-size: x-small;
     margin-bottom: 2%;
+}
+
+#cart_button input {
+   
+    @media only screen and (min-width: 1300px){
+        text-align: left;
+        font-family: sans-serif;
+        color: #050505;
+        font-weight: bold;
+        font-size: medium;
+        margin-bottom: 2%;
+    }
 }
 
 #cart_line{
