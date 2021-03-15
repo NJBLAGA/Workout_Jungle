@@ -1,17 +1,28 @@
-    <h1 id="list1"><%= @listing.title %></h1> 
-<div class="card mb-3" id='listing_card_show'>
+ <!-- Display listing.title --> 
+<h1 id="list1"><%= @listing.title %></h1> 
+   <div class="card mb-3" id='listing_card_show'>
+    <!-- Display listing.image--> 
   <img class="card-img-top"> <%= image_tag @listing.image%>
   <div class="card-body">
+   <!-- Display listing.description --> 
     <p class="card-text"><strong>Description: </strong><%=@listing.description%></p>
+    <!-- Display listing.condition --> 
        <p class="card-text"><strong>Condition: </strong><%= @listing.condition%></p>
+        <!-- Display listing.listing_type--> 
           <p class="card-text"><strong>Listing Type: </strong><%= @listing.listing_type%></p>
+           <!-- Display listing.price --> 
              <p class="card-text"><strong>Asking Price: </strong>$<%= @listing.price%></p>
+              <!-- Display listing.username --> 
                 <p class="card-text"><strong>Listed By: </strong><%= @listing.user.username%>
+                 <!-- Add to wish list button --> 
                  <div id="cart_button"><%= button_to'Add To Wish List', line_items_path(listing_id: @listing)%></div>
   </div>
   <div  id="button_group">
+  <!-- Message user button, directs to conversation page--> 
   <button type="button" class="btn btn-primary" id="button_ele"><%= link_to 'Message User', conversations_path%></button>
+    <!-- All Listings button, directs to all listings page --> 
   <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'All Listings', listings_path%></button>
+    <!-- My listings button, directs to my listings page--> 
   <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'My Listings', own_listing_path%></button>
 </div>
 </div>

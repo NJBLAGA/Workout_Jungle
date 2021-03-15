@@ -1,20 +1,29 @@
 <h1 id="list1"> My Listings</h1>
-<%= render 'filter'%>
+<%= render 'own_filter'%>
 <br>
 <div id="border">
+ <!-- Loop through listings--> 
   <% @listings.each do |listing| %>
   <main class="card" id='listing_card'>
+   <!-- Display listing.image --> 
   <img> <%=  image_tag listing.image%>
   <div class="card-body" id="body_font">
   <ul class="list-group list-group-flush" id="body_font">
+   <!-- Display listing.title --> 
     <li class="list-group-item" id="body_font"><strong>Title:</strong> <%= listing.title%></li>
+    <!-- Display listing.condition --> 
     <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
+     <!-- Display listing.price--> 
     <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+     <!-- Display listing.username--> 
     <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
   </ul>
   <div id="tag_font">
+   <!-- Display show link to show page--> 
     <a class="card-link" id="body_font"><%= link_to 'Show', listing%></a>
+    <!-- Display edit link, directs user to edit listing form--> 
     <a class="card-link" id="body_font"> <td><%= link_to 'Edit', edit_listing_path(listing) %></td></a>
+    <!-- Display delete link, calls destroy listing method for user--> 
     <a class="card-link" id="body_font"><%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }%></a>
 </div> 
 </main>

@@ -1,26 +1,33 @@
 <nav class="navbar navbar-dark bg-dark">
 
   <div class="container-fluid" id="bootstrap-overrides">
+   <!-- Link to home page (root) --> 
     <a class="navbar-brand"><%= link_to "Workout Jungle", root_path%></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+       <!-- If user is signed in--> 
        <% if user_signed_in? %>
         <li class="nav-item">
+         <!-- Display link to all listings page--> 
           <a class="nav-link"><%= link_to 'All Listings', listings_path%></a>
         </li>
         <li class="nav-item">
+        <!-- Display link to my listings page--> 
           <a class="nav-link"><%= link_to 'My Listings', own_listing_path%></a>
         </li>
         <li class="nav-item">
+        <!-- Display link to new listings page--> 
           <a class="nav-link"><%= link_to 'Post New Listing', new_listing_path%></a>
         </li>
           <li class="nav-item">
+          <!-- Display link to wish list page--> 
           <a class="nav-link"><%= link_to 'Wish List', cart_path(@cart)%></a>
         </li>
         <li class="nav-item">
+        <!-- Display link to inbox page--> 
           <a class="nav-link"><%= link_to 'Inbox', conversations_path%></a>
         </li>
         <li class="nav-item dropdown">
@@ -29,10 +36,14 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
              <li><hr class="dropdown-divider"></li>
+             <!-- Display link to edit profile page--> 
             <li><a class="dropdown-item"><%= link_to 'Edit Profile', edit_user_registration_path%></a></li>
+            <!-- Call end current session--> 
             <li><a class="dropdown-item"><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
             <li><hr class="dropdown-divider"></li>
+            <!-- If user is signed in and admin--> 
             <% if user_signed_in? && current_user.admin %>
+            <!-- Display link to admin dashboard page--> 
             <li><a class="dropdown-item"><%= link_to 'Admin Dashboard', admins_index_path%></a></li>
              <% else %>
       <% end %> 
@@ -40,9 +51,11 @@
         </li>
       <% else %> 
           <li class="nav-item">
+          <!-- Display link to sign in page--> 
           <a class="nav-link"><%= link_to "Sign In", new_user_session_path%></a>
         </li>
          <li class="nav-item">
+          <!-- Display link to sign up page--> 
           <a class="nav-link"><%= link_to "Sign up", new_user_registration_path%></a>
         </li>
       </ul>

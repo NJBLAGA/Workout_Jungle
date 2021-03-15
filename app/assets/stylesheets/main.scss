@@ -1,5 +1,6 @@
+//  import bootstrap styling
  @import "bootstrap";
-
+// navbar font styling
 #bootstrap-overrides  a {
         font-size: 1.8rem;
     font-family: sans-serif;
@@ -7,37 +8,35 @@
     font-weight: 600;
     text-decoration: none;
 }
-
+// navbar styling
 .navbar-nav .dropdown-menu {
     background-color: #343a40 ;
     border: none;
 }
-
-  
+// navbar styling
 .navbar-nav .dropdown-menu {
     background-color: #343a40 ;
     border: none;
 }
-
+// Home page styling
 #bootstrap-overrides2  a {
     font-weight: bold;
     text-decoration: none;
 }  
-
+// Home page styling
 bootstrap-overrides2:link {
     text-decoration: none;
 }
   
-  
+// Home page styling 
 bootstrap-overrides2:visited {
       text-decoration: none;
 }
-  
-  
+// Home page styling
 bootstrap-overrides2:hover {
       text-decoration: none;
 }
-
+// Home page welcome message styling
 #bootstrap-overrides3 {
     background: linear-gradient(-45deg, #36b5e4, #2ce6ba);
     animation: gradient 15s ease infinite;
@@ -47,42 +46,41 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Home page welcome message font styling
 #bootstrap-size{
     font-size: 0.8rem;
 }
-
+// Sign in/up button styling
 #bootstrap-overrides4 a {
     font-family: sans-serif;
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
-
+// Sign in/up button styling
 #bootstrap-overrides5  {
     max-width: 80%;
     align-self: center;
     margin: auto;   
 }
-
+// Sign in/up button styling
 #bootstrap-overrides5 p  {
     text-align: center;
     font-size: medium;
 }
-
+// Home page terms and condition sizing (mobile view)
 #li-steps {
     text-align: left;
     font-size: xx-small;
 }
-
+// Home page terms and condition sizing (desktop view)
 #li-steps {
-   
     @media only screen and (min-width: 1300px){
     text-align: left;
     font-size: medium;
     }
 }
-
+// Home page title styling
 #bootstrap-overrides6 {
     font-size: 80%;
     font-family: sans-serif;
@@ -90,11 +88,11 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Home page title styling
 #bootstrap-overrides7 {
     padding: none;
 }
-
+// Notice/Alert styling
 #notice {
     text-align: center;
     margin-top: 1%;
@@ -103,11 +101,11 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Admin page padding styling
 #admin  {
     margin-top: 1%;
 }
-
+// Admin page font styling
 #admin a {
     font-family: sans-serif;
     color: white;
@@ -115,7 +113,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     max-width: 30%;
 }
-
+// Admin page username styling
 #admin2 {
     text-align: center;
     font-size: 1rem;
@@ -125,7 +123,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
 
 }
-
+// Admin page username styling
 #admin3 {
     font-size: 1.3rem;
     font-family: sans-serif;
@@ -134,7 +132,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
 
 }
-
+// Admin page title styling
 #admin4 {
     text-align: center;
     font-size: 2rem;
@@ -143,13 +141,13 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Form (sign in/up) styling
 #forms1 {
     max-width: 80%;
     align-self: center;
     margin: auto;
 }
-
+// Form (sign in/up)  title font styling
 #forms2 {
     text-align: center;
     font-size: 2rem;
@@ -158,7 +156,7 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Form (sign in/up)  title font styling
 #forms3 {
     text-align: center;
     font-family: sans-serif;
@@ -166,7 +164,7 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Form (sign in/up) font styling
 #forms4 {
     text-align: center;
     font-family: sans-serif;
@@ -175,7 +173,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1.5rem;
 }
-
+// Form (sign in/up) button font styling
 #formb  .btn {
     text-align: center;
     font-family: sans-serif;
@@ -184,7 +182,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// Conversation page title font styling
 #con1 {
     text-align: center;
     font-family: sans-serif;
@@ -193,7 +191,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 2rem;
 }
-
+// Conversation page username font styling
 #con2 {
     text-align: center;
     font-family: sans-serif;
@@ -202,7 +200,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// Conversation page button font styling
 #signcol {
     text-align: center;
     font-family: sans-serif;
@@ -211,6 +209,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
+// Conversation page button styling
 #signcol .btn {
     text-align: center;
     font-family: sans-serif;
@@ -219,7 +218,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// Conversation page button font styling
 #con3 a{
     text-align: center;
     font-family: sans-serif;
@@ -228,12 +227,12 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// Message page styling
 #messall {
     margin-left: 5%;
     margin-right: 5%;
 }
-
+// Message page title font styling
 #mess1 {
     text-align: center;
     font-family: sans-serif;
@@ -242,7 +241,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 2rem;
 }
-
+// Message page username and timestamp font styling
 #mess2 {
     font-size: 1rem;
     font-family: sans-serif;
@@ -250,25 +249,24 @@ bootstrap-overrides2:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
+// Message page message output font styling
 #mess3 {
   font-size: 0.6rem;
   font-family: sans-serif;
   color: rgb(12, 12, 12);
   text-decoration: none;
 }
-
+// Message page input box styling
 #mess4 .input-group-text {
     margin: auto;
     align-items: center;
     background-color: none;
-
 }
-
+// Message page link styling
  #mess5 {
     text-align: center;
 }
-
+// Message page link font styling
  #mess5 a {
     text-align: center;
     font-family: sans-serif;
@@ -284,22 +282,22 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 2rem;
 }
-
+// New listing page title styling
 #new12 {
     max-width: 80%;
     align-self: center;
     margin: auto; 
 }
-
+// New listing page submit/back button styling
 #new13 btn btn-primary{
   justify-self: center;
 }
-
+// New listing page submit/back button font styling
 #newl3 {
     text-align: center;
     margin-bottom: 2%;
 }
-
+// New listing page submit/back button font styling
 #newl4 {
     text-align: center;
     font-family: sans-serif;
@@ -308,6 +306,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
+// New listing page submit/back button font styling
 #newl4 a{
     text-align: center;
     font-family: sans-serif;
@@ -316,20 +315,20 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// New listing page image input styling
 #newl5 {
     text-align: left;
 }
-
+// New listing page form styling
 #newl6 {
     text-align: center;
 }
-
+// New listing page form styling
 .button {
     position: absolute;
     top: 50%;
 }  
-
+// All/My listing page title styling
 #list1 {
     text-align: center;
     font-family: sans-serif;
@@ -338,14 +337,14 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 2rem;
 }
-
+// All/My listing page filter layout styling
 #list2  {
     margin-right:auto;
     margin-left:auto;
     text-align:center;
     align-content:center;
 }
-
+// All/My listing page filter font styling
 #list3  a{
     text-align: center;
     font-family: sans-serif;
@@ -354,7 +353,7 @@ bootstrap-overrides2:hover {
     text-decoration: none;
     font-size: 1rem;
 }
-
+// All/My listing page card styling
 #border {
     display: flex;
     flex-wrap: wrap;
@@ -362,34 +361,34 @@ bootstrap-overrides2:hover {
     align-items: flex-start;  
     border: black;
     border-radius: 1px;
+    margin-bottom: 5%;
 }
-
+// All/My listing page card styling
 #listing_card {
     width: 10rem;
     height: 5rem;   
-    margin-bottom: 14rem;
+    margin-bottom: 20rem;
     margin-left: auto;
     margin-right: auto;
-
+// All/My listing page card image styling (mobile view)
 img {
     max-width: 100%;
     width: 100%;   
   }
 }
 
-
+// All/My listing page card image styling (desktop view)
 #listing_card  {
-   
     @media only screen and (min-width: 1300px){
     width: 20rem;
     height: 15rem;   
-    margin-bottom: 14rem;
+    margin-bottom: 25rem;
     margin-left: auto;
     margin-right: auto;
     }
 }
-
-  #listing_card_show {
+// Show listing page card styling
+#listing_card_show {
     width: 90%;
     height: 60%rem;   
     margin-bottom: 12rem;
@@ -397,27 +396,27 @@ img {
     margin-left: auto;
     margin-right: auto;
     border: none;
-  
+// Show listing page card styling image
 img {
     max-width: 70%;
     width: 70%; 
-    max-height: 70%;
-    height: 70%;  
+    max-height: 60%;
+    height: 60%;  
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-
+// Show listing page card font styling 
 p {
     font-size: medium;
 
   }
-
+// Show listing page buttons styling
 #button_group {
       margin: auto;
       margin-bottom: 1%;
   }
-
+// Show listing page buttons font color styling
 #button_ele {
     text-align: center;
     font-family: sans-serif;
@@ -425,7 +424,7 @@ p {
     font-weight: bold;
     font-size: 0.5rem;
 }
-
+// Show listing page buttons font styling
 #button_ele a {
     text-align: center;
     font-family: sans-serif;
@@ -434,7 +433,7 @@ p {
     font-size: small;
     }
 }
-
+// Show listing page buttons image styling (desktop view)
 #listing_card_show img   {
    
     @media only screen and (min-width: 1300px){
@@ -447,10 +446,8 @@ p {
         margin-right: auto;
     }
 }
-
-
+// Show listing page buttons styling (desktop view)
 #button_ele a {
-   
     @media only screen and (min-width: 1300px){
     text-align: center;
     font-family: sans-serif;
@@ -459,37 +456,38 @@ p {
     font-size: medium;
     }
 }
-
+// Show listing page card details styling 
 #body_font.card-body {
     font-size: 1%;
     padding: 1%;
     max-height: 40%;
     height: 40%;
 }
-
+// Show listing page card details styling 
 #body_font.list-group-item {
     font-size: medium;
     padding: 1%;
     max-height: 40%;
     height: 40%;
 }
-
+// Show listing page card details/buttons styling 
 #tag_font  {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 10%;
 }
-
+// Show listing page card details/buttons font styling 
 #tag_font a {
     font-weight: 800;
     font-size: medium;
     margin-top: 5%;
 
 }
-
+// Show listing page card details/buttons font styling 
 #size a{
     font-size: x-large;
 }
-
+// Show listing page card cart button styling (mobile view)
 #cart_button input {
     text-align: left;
     font-family: sans-serif;
@@ -498,9 +496,8 @@ p {
     font-size: x-small;
     margin-bottom: 2%;
 }
-
+// Show listing page card cart button styling (desktop view)
 #cart_button input {
-   
     @media only screen and (min-width: 1300px){
         text-align: left;
         font-family: sans-serif;
@@ -510,7 +507,7 @@ p {
         margin-bottom: 2%;
     }
 }
-
+// Line item layout styling 
 #cart_line{
     width: 10rem;
     height: 10rem;   
@@ -519,7 +516,7 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
-
+// Line item layout styling 
 #cart_img{
     width: 10rem;
     height: 10rem;   
@@ -536,12 +533,12 @@ img {
   }
 
 }
-
+// Wish list total price section layout styling 
 #line_item_size {
     width: 90%;
    margin: auto;
 }
-
+// Wish list total price section font styling 
 #line_item_price {
     text-align: center;
     font-family: sans-serif;
@@ -551,7 +548,7 @@ img {
     width: 90%;
     margin-left: 5%;
 }
-
+// Wish list remove item font styling 
 #rem_item {
     width: 90%;
     display: block;
@@ -559,19 +556,19 @@ img {
     margin-right: auto;
     margin-bottom: 2%;  
 }
-
+// Wish list title font styling
 #cart_total p {
     font-size: medium;
     font-family: sans-serif;
     font-weight: 800;
 }
-
+// Wish list delete list button layout styling
 #em_cart{
     display: block;
   margin-left: auto;
   margin-right: auto;   
 }
-
+// Wish list delete list button font styling
 #em_cart input {
     text-align: center;
     font-family: sans-serif;
@@ -583,5 +580,13 @@ img {
     margin-right: auto;
     margin-bottom: 2%;
 }
-
-
+// Wish list title/description font styling (mobile view)
+#line_item_line {
+    font-size: x-small;
+}
+// Wish list title/description font styling (mobile view)
+#line_item_line {
+    @media only screen and (min-width: 1300px){
+        font-size: large;
+    }
+}

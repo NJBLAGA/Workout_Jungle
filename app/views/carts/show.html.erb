@@ -1,14 +1,17 @@
+<!-- Call cart method -->
 <% if total_cart_items %>  
+<!-- Display total items in current wish list -->
 <h1 id="list1"> <span>Wish List Items: <%= cart_count_over_one %></span></h1>
+<!-- Link to all listings page -->
 <h2 id='mess5'><%= link_to 'Keep Shopping', listings_path%></h2>        
 <% end %>
+<!-- Render line items partial -->
 <%= render(@cart.line_items) %>
-
-
-
+<!-- Calls total_price method -->
   <article class="btn btn-success" id="line_item_price">Wish List Total: <%= number_to_currency(@cart.total_price)%></article>
 <br>
 <br>
+<!-- Calls destroy cart method from model -->
    <div id="em_cart"><%= button_to 'Delete List', @cart, method: :delete, data: { confirm: "Are you sure? " }%></div>
 
 

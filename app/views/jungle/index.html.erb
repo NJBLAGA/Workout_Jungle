@@ -5,19 +5,22 @@
   <div class="card-body" id="bootstrap-overrides5">
     <h5 class="card-title" id=>
     <p class="card-text" id="bootstrap-overrides6">
+    <!-- Welcome Message -->
     Welcome to Workout Jungle
     <br> 
     The ultimate Australian workout marketplace!
     </h5>
     <h5 class="card-title" 
-    <p class="card-text" id="bootstrap-overrides7">
+     <p class="card-text" id="bootstrap-overrides7">
     </h5>
+    <!-- How to use -->
    <ol id="li-steps"><strong>Start now with 4 easy steps!</strong>
     <li>Create an account</li>
     <li>Browse our listings of new and used gym equipment or sell your own</li>
     <li>Add listings to your Wish List</li>
     <li>Message the seller, make an offer and start building your ultimate gym experience</li> 
    </ol>     
+   <!-- Terms & Conditions -->
     <ol id="li-steps"><strong>Terms and Conditions</strong>
     <li>Be respectful to admin and fellow users </li>
     <li> Do not engage, prescribe or perform illegal activities</li>
@@ -26,10 +29,12 @@
     <br>
       <strong>Any violation of the above terms and conditions will result in immediate cancellation of your account and may result in legal action.</strong>
   </ol>  
+  <!-- If user is not signed in -->
     <% if user_signed_in? %>
 <br>
 <br>
 <% else %> 
+  <!-- Display sign in/up buttons -->
 <button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to "Sign In", new_user_session_path%></button>
 <button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to "Sign Up", new_user_registration_path%></button>
 <% end %>  

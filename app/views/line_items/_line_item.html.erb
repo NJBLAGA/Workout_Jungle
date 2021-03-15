@@ -1,16 +1,20 @@
-
   <div class="list-group">
   <a class="list-group-item list-group-item-action active" aria-current="true" id="line_item_size">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Title: <%= line_item.listing.title %></h5>
-      <small>Quantity: <%= line_item.quantity%></small>
+      <!-- Calls listing.title in current line_item -->
+      <h5 class="mb-1" id="line_item_line">Title: <%= line_item.listing.title %></h5>
+      <!-- Displays quantity of current line_item-->
+      <small id="line_item_line">Quantity: <%= line_item.quantity%></small>
     </div>
-    <p class="mb-1">Description: <%= truncate(line_item.listing.description, length: 150)%></p>
-    <small>Price: <%= number_to_currency(line_item.total_price)%></small> 
+    <!-- Calls listing.description in current line_item -->
+    <p class="mb-1" id="line_item_line">Description: <%= truncate(line_item.listing.description, length: 150)%></p>
+    <!-- Calls number_to-currency and total_price methods to display total price of current wish list -->
+    <small id="line_item_line">Price: <%= number_to_currency(line_item.total_price)%></small> 
   </a>
   </div>
 
 <article id="rem_item">
+<!-- Calls line_item destroy method -->
       <%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }%>
       <hr>
 </article>
