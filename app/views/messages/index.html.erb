@@ -1,6 +1,6 @@
  <article id="messall">
 <h1 id='mess1'><%= @conversation.recipient.username %></h1>
-<h2 id='mess5'><%= link_to 'Back to conversations', conversations_path %></h2>
+<h2 id='mess5'><%= link_to 'Back To Conversations', conversations_path %></h2>
 <% if @over_ten %>
   <%= link_to "Show previous", '?m=all', class:'button is-link' %>
 <% end %>
