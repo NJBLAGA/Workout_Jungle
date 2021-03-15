@@ -1,9 +1,12 @@
  <article id="messall">
 <h1 id="con1">Conversations</h1>
+<!-- Loop through users -->
   <% @users.each do |user| %>
+  <!-- If user is not current user and does exists in database -->
    <% if user.id != current_user.id && User.exists?(user.id)%>
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center" id="con2">
+    <!-- Display username and link to message user -->
     <%= user.username %>  
     <span class="badge bg-primary rounded-pill" id="con3"> <%= link_to "Message", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post" %></span>
     </li>

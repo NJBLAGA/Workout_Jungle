@@ -1,23 +1,33 @@
  <article id="messall">
+   <!-- Display recipent username--> 
 <h1 id='mess1'><%= @conversation.recipient.username %></h1>
+  <!-- Link back to conversations page--> 
 <h2 id='mess5'><%= link_to 'Back To Conversations', conversations_path %></h2>
+  <!-- If page has over 10 messages--> 
 <% if @over_ten %>
+  <!-- Display link to previous messages--> 
   <%= link_to "Show previous", '?m=all', class:'button is-link' %>
 <% end %>
+  <!-- Loop through messages--> 
 <% @messages.each do |message| %>
-  <% if message.body %>
+  <!-- If message has body--> 
+  <% if message.body %> 
     <% user = User.find(message.user_id) %>
 <hr>
+  <!-- Display username and time stamp of message--> 
   <h1 id='mess2'><%= user.username %>@<%= message.message_time %></h1>
+    <!-- Call kramdown to convert message and display on page--> 
   <p id='mess3'><%= sanitize markdown_to_html(message.body) %></div></P>
   <% end %>
 <% end %>
 <hr>
 <div class="input-group" id='mess4'>
+  <!-- Message input form field--> 
   <span class="input-group-text"><%= form_for [@conversation, @message] do |f| %>
   <%= f.text_area :body, class: "textarea", placeholder: "Inquire about a trade..." %>
 <br>
   <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+   <!-- Send message button--> 
   <button type="submit" class="btn btn-primary" id="newl4">Send Message</button>
 <% end %>
 </div>

@@ -1,0 +1,14 @@
+<div id="list2">
+<div class="btn-group" role="group">
+<!-- Displays all listing_types for filter --> 
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'All', own_listing_path %></button>
+    <!-- Displays all listings with a strength listing_types for filter --> 
+  <button type="button" class="btn btn-primary" id="list3"><%= link_to 'Strength', own_listing_path(listing_type: "Strength")%></button>
+    <!-- Displays all listings with a cardio listing_types for filter --> 
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'Cardio', own_listing_path(listing_type: "Cardio")%></button>
+    <!-- Displays all listings with a boxing listing_types for filter --> 
+  <button type="button" class="btn btn-primary" id="list3"><%= link_to 'Boxing', own_listing_path(listing_type: "Boxing")%></button>
+    <!-- Displays all listings with a misc listing_types for filter --> 
+  <button type="button" class="btn btn-primary" id="list3"> <%= link_to 'Misc.', own_listing_path(listing_type: "Misc")%></button>
+ </div>
+  </div>

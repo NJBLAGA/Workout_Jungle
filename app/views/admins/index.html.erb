@@ -1,12 +1,15 @@
-<!-- users/index.html.erb -->
+<!-- Admin/index.html.erb -->
 <article id="messall">
  <h1 id="admin4">Admin Dashboard</h1>
     <ul class="list-group list-group-flush">
+      <!-- Loop through users -->
     <% @users.each do |user| %>
       <% if user.admin?%>
+        <!-- If user is admin display username only -->
       <li class="list-group-item"id="admin2"> <%= user.username %><br></li>
     <% else %>
       <li class="list-group-item"id="admin2"><%= user.username %><br>
+              <!-- If user is admin display username & make admin & remove user buttons -->
       <button type="button" class="btn btn-primary btn-sm" id="admin"><%= link_to 'Make Admin', assign_admin_url(user), method: :put, data: { confirm: "Assign User Admin Status" } %></button>
       <button type="button" class="btn btn-primary btn-sm" id="admin"><%= link_to 'Remove User', admins_destroy_url(user), method: :delete, data: { confirm: "Really delete this user?" }%></button>
   <br>

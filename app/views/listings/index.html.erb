@@ -1,47 +1,65 @@
-<h1 id="list1">All Listings</h1>
+<h1 id="list1"> All Listings</h1>
 <%= render 'filter'%>
 <br>
 <div id="border">
-<% if user_signed_in? && current_user.admin %>
+  <!-- If current user signed in & admin display; --> 
+ <% if user_signed_in? && current_user.admin %>
+ <!-- Loop through listings --> 
   <% @listings.each do |listing| %>
   <main class="card" id='listing_card'>
+   <!-- Display listing.image --> 
   <img> <%=  image_tag listing.image%>
   <div class="card-body" id="body_font">
   <ul class="list-group list-group-flush" id="body_font">
+    <!-- Display listing.title --> 
     <li class="list-group-item" id="body_font"><strong>Title:</strong> <%= listing.title%></li>
+    <!-- Display listing.condition --> 
     <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
+     <!-- Display listing.price--> 
     <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+     <!-- Display listing.username--> 
     <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
   </ul>
-  <div id="tag_font">
+    <div id="tag_font">
+     <!-- Display show link to show page--> 
     <a class="card-link" id="body_font"><%= link_to 'Show', listing%></a>
-    <a class="card-link" id="body_font"><%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }%></a>
-
-    </div> 
+     <!-- Display delete link, calls destroy listing method for admin--> 
+    <a class="card-link" id="body_font"><%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }%></a>   
+</div> 
 </main>
   <% end %>
-</div>
 <% else %>
+<!-- Loop through listings --> 
   <% @listings.each do |listing| %>
-  <div id="single_card">
-  <div class="card" id='listing_card'>
+  <main class="card" id='listing_card'>
+   <!-- Display listing.image --> 
   <img> <%=  image_tag listing.image%>
   <div class="card-body" id="body_font">
-</div>
   <ul class="list-group list-group-flush" id="body_font">
-     <li class="list-group-item" id="body_font"><strong>Title:</strong> <%= listing.title%></li>
+    <!-- Display listing.title --> 
+    <li class="list-group-item" id="body_font"><strong>Title:</strong> <%= listing.title%></li>
+    <!-- Display listing.condition --> 
     <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
-    <li class="list-group-item" id="body_font"><strong>Price:</strong> <%= listing.price%></li>
+     <!-- Display listing.price--> 
+    <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+     <!-- Display listing.username--> 
     <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
   </ul>
-<div id="tag_font">
-    <a class="card-link" id="body_font"><%= link_to 'Show', listing%></a>
-</div>
-  <br>
+    <div id="tag_font">
+     <!-- Display show link to show page-->
+ <a class="card-link" id="body_font"><%= link_to 'Show', listing%></a>
+  <!-- Display message link to converstaions page--> 
+ <a class="card-link" id="body_font"><%= link_to 'Message', conversations_path%></a>   
+</div> 
+</main>
+  <% end %>
 <% end %>
-<% end %>
 </div>
-</div>
+
+
+
+
+
 
 
 
