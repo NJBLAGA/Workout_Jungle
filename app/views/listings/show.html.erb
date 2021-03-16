@@ -18,12 +18,12 @@
                  <div id="cart_button"><%= button_to'Add To Wish List', line_items_path(listing_id: @listing)%></div>
   </div>
   <div  id="button_group">
-  <!-- Message user button, directs to conversation page--> 
-  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to 'Message User', conversations_path%></button>
+  <!-- Message user button, directs to sellers conversation page--> 
+  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to 'Message User', conversations_path(sender_id: current_user.id, recipient_id: @listing.user), method: "post"%></button>
     <!-- All Listings button, directs to all listings page --> 
   <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'All Listings', listings_path%></button>
     <!-- My listings button, directs to my listings page--> 
-  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'My Listings', own_listing_path%></button>
+  <button type="button" class="btn btn-primary" id="button_ele"><%= link_to  'Wish List', cart_path(@cart)%></button>
 </div>
 </div>
 

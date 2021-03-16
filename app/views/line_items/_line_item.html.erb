@@ -8,15 +8,22 @@
     </div>
     <!-- Calls listing.description in current line_item -->
     <p class="mb-1" id="line_item_line">Description: <%= truncate(line_item.listing.description, length: 150)%></p>
+      <!-- Displays user who posted listing -->
+     <small id="line_item_line">Posted by: <%= line_item.listing.user.username%></h5></small> 
+    <br>
     <!-- Calls number_to-currency and total_price methods to display total price of current wish list -->
     <small id="line_item_line">Price: <%= number_to_currency(line_item.total_price)%></small> 
   </a>
   </div>
 
 <article id="rem_item">
-<!-- Calls line_item destroy method -->
-      <%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }%>
+      <!-- Calls line_item destroy method -->
+      <%= link_to 'Show', line_item.listing%> |
+      <!-- Calls line_item destroy method -->
+       <%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }%>
       <hr>
 </article>
+
+
    
- 
+  
