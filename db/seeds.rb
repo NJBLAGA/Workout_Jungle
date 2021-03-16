@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 user = User.new(
     id: 1,
     username: "Admin1",
@@ -34,28 +35,131 @@ user = User.new(
     password_confirmation: "password123"
   )
   user.save!
-  
-  # Listing.create!([{
-  #   title: "Exercise Bands",
-  #   description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-  #   condition: "Excellent",
-  #   price: "20",
-  #   listing_type: "Misc",
-  #   image: Rails.root.join("app/assets/images/bands.jpg").open,
-  #   user_id: user.id
-  # },
-  # {
-  #   title: "20kg Dumbbell",
-  #   description: "Hello and thank you for looking at my Item. We are proud to present this stunning 2018 Gibson Les Paul Standard in Bourbon Burst in 100% Mint/Unplayed condition! The 2017 LP Standards are extremely nice,  with a super comfortable necks, and awesome bold finishes.  This Bourbon Burst finish is absolutely stunning! The tone that comes out of this monster is everything you would expect from a Les Paul Standard!! The guitar sounds awesome and has that famous Les Paul  Tone.  Very easy to play with a nice comfortable standard neck featuring a compound radius fret board which means shredding speed is easier on a Gibson! This is one great guitar for the money!  Will  ship via Fed Ex Ground or Home Delivery in Brand New Gibson case with pictured case candy insured for full purchase price!",
-  #   condition: "Used",
-  #   price: "30",
-  #   listing_type: "Strength",
-  #   image: Rails.root.join("app/assets/images/db.jpg",
-  #   user_id: user.id
-  # }])
 
+  boxing_gloves_2 = Listing.new(title: "Everlast Boxing gloves",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Mint",
+    price: "15",
+    listing_type: "Boxing",
+    user_id: user.id)
 
+    boxing_gloves_2.image.attach(io: File.open('app/assets/images/boxing_gloves_2.jpg'), filename: ' boxing_gloves_2.jpg')
+    boxing_gloves_2.save
   
-  
+  resistance_band = Listing.new(title: "Resistance Bands",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Excellent",
+    price: "15",
+    listing_type: "Misc",
+    user_id: user.id)
 
+    resistance_band.image.attach(io: File.open('app/assets/images/res_bands.jpg'), filename: 'res_bands.jpg')
+    resistance_band.save
+
+  barbell = Listing.new(title: "12kg Barbell",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Used",
+    price: "15",
+    listing_type: "Strength",
+    user_id: user.id)
+
+    barbell.image.attach(io: File.open('app/assets/images/barbell.jpg'), filename: 'barbell.jpg')
+    barbell.save
+
+    user = User.new(
+      id: 4,
+      username: "Kane",
+      email: "kane@example.com",
+      password: "password123",
+      password_confirmation: "password123"
+    )
+    user.save!
+
+  boxing_gloves = Listing.new(title: "Boxing gloves",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Used",
+    price: "12",
+    listing_type: "Boxing",
+    user_id: user.id)
+
+    boxing_gloves.image.attach(io: File.open('app/assets/images/boxing_gloves.jpg'), filename: ' boxing_gloves.jpg')
+    boxing_gloves.save
+
+  dumbell = Listing.new(title: "Pair of 12kg Dumbells",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Fair",
+    price: "20",
+    listing_type: "Strength",
+    user_id: user.id)
+
+    dumbell.image.attach(io: File.open('app/assets/images/dumbell.jpg'), filename: 'dumbell.jpg')
+    dumbell.save
+
+  ez_curl_bar = Listing.new(title: "12kg Ez Curl Bar",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Fair",
+    price: "22",
+    listing_type: "Strength",
+    user_id: user.id)
+
+    ez_curl_bar.image.attach(io: File.open('app/assets/images/ez_curl_bar.jpg'), filename: 'ez_curl_bar.jpg')
+    ez_curl_bar.save
+
+    user = User.new(
+      id: 5,
+      username: "Kelly",
+      email: "kelly@example.com",
+      password: "password123",
+      password_confirmation: "password123"
+    )
+    user.save!
+
+  medicine_ball = Listing.new(title: "5kg Medicine Ball",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Mint",
+    price: "30",
+    listing_type: "Misc",
+    user_id: user.id)
+
+    medicine_ball.image.attach(io: File.open('app/assets/images/medicine_ball.jpg'), filename: 'medicine_ball.jpg')
+    medicine_ball.save
+
+  sparing_gloves = Listing.new(title: "Red/White Sparing Gloves",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Mint",
+    price: "18",
+    listing_type: "Boxing",
+    user_id: user.id)
+
+    sparing_gloves.image.attach(io: File.open('app/assets/images/sparing_gloves.jpg'), filename: 'sparing_gloves.jpg')
+    sparing_gloves.save
+
+  tricep_bar = Listing.new(title: "12 kg Tricep Bar",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Used",
+    price: "17",
+    listing_type: "Strength",
+    user_id: user.id)
+
+    tricep_bar.image.attach(io: File.open('app/assets/images/tricep_bar.jpg'), filename: ' tricep_bar.jpg')
+    tricep_bar.save
+
+    user = User.new(
+      id: 6,
+      username: "Mitch",
+      email: "mitch@example.com",
+      password: "password123",
+      password_confirmation: "password123"
+    )
+    user.save!
+
+  treadmill = Listing.new(title: "Treadmill",
+    description: "Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    condition: "Mint",
+    price: "50",
+    listing_type: "Cardio",
+    user_id: user.id)
+
+    treadmill.image.attach(io: File.open('app/assets/images/treadmill.jpg'), filename: ' treadmill.jpg')
+    treadmill.save
   

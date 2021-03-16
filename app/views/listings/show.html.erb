@@ -11,7 +11,7 @@
         <!-- Display listing.listing_type--> 
           <p class="card-text"><strong>Listing Type: </strong><%= @listing.listing_type%></p>
            <!-- Display listing.price --> 
-             <p class="card-text"><strong>Asking Price: </strong>$<%= @listing.price%></p>
+             <p class="card-text"><strong>Asking Price: </strong><%= number_to_currency(@listing.price)%></p>
               <!-- Display listing.username --> 
                 <p class="card-text"><strong>Listed By: </strong><%= @listing.user.username%>
                  <!-- Add to wish list button --> 

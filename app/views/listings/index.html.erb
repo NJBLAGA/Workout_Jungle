@@ -16,7 +16,7 @@
     <!-- Display listing.condition --> 
     <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
      <!-- Display listing.price--> 
-    <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+    <li class="list-group-item" id="body_font"><strong>Price: </strong><%= number_to_currency(listing.price)%></li>
      <!-- Display listing.username--> 
     <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
   </ul>
@@ -41,7 +41,7 @@
     <!-- Display listing.condition --> 
     <li class="list-group-item" id="body_font"><strong>Condition:</strong> <%= listing.condition%></li>
      <!-- Display listing.price--> 
-    <li class="list-group-item" id="body_font"><strong>Price: </strong>$<%= listing.price%></li>
+    <li class="list-group-item" id="body_font"><strong>Price: </strong><%= number_to_currency(listing.price)%></li>
      <!-- Display listing.username--> 
     <li class="list-group-item" id="body_font"><strong>Posted By:</strong> <%= listing.user.username %> </li>
   </ul>
