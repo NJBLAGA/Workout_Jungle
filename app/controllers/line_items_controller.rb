@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  #User must be logged in
+  before_action :authenticate_user!
   #Helper found in app/models/concerns/current_cart.rb
   include CurrentCart
   #Set line item

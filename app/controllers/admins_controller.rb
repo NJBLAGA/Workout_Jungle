@@ -1,4 +1,6 @@
 class AdminsController < ApplicationController
+  #User must be logged in
+  before_action :authenticate_user!
   #Allows admins to access all users
     def index 
       @users = User.all

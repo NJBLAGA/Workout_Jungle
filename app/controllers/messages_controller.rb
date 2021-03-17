@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
-    before_action :find_conversation
+  #User must be logged in
+  before_action :authenticate_user!
+  before_action :find_conversation
   
     def index
       #Grab all messages in conversation by using find_conversation

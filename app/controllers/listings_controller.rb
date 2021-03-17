@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  #User must be signed in to perform any action other than index and show
-  before_action :authenticate_user!, except: [:index, :show]
+  #User must be logged in
+  before_action :authenticate_user!
 
   # GET /listings or /listings.json
   def index

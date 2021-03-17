@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  #User must be logged in
+  before_action :authenticate_user!
   #Error handling to check if there is a invalid wish list, provides error and rescue
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   before_action :set_cart, only: %i[ show edit update destroy ]
