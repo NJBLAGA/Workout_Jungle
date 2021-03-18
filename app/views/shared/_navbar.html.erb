@@ -10,6 +10,11 @@
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
        <!-- If user is signed in--> 
        <% if user_signed_in? %>
+       <% if user_signed_in? && current_user.admin %>
+          <a class="nav-link"><%= link_to 'Admin Dashboard', admins_index_path%></a>
+        </li>
+        <% else %>
+        <% end %> 
         <li class="nav-item">
          <!-- Display link to all listings page--> 
           <a class="nav-link"><%= link_to 'All Listings', listings_path%></a>
@@ -30,25 +35,16 @@
         <!-- Display link to inbox page--> 
           <a class="nav-link"><%= link_to 'Inbox', conversations_path%></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profile
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-             <li><hr class="dropdown-divider"></li>
-             <!-- Display link to edit profile page--> 
-            <li><a class="dropdown-item"><%= link_to 'Edit Profile', edit_user_registration_path%></a></li>
-            <!-- Call end current session--> 
-            <li><a class="dropdown-item"><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
-            <li><hr class="dropdown-divider"></li>
-            <!-- If user is signed in and admin--> 
-            <% if user_signed_in? && current_user.admin %>
-            <!-- Display link to admin dashboard page--> 
-            <li><a class="dropdown-item"><%= link_to 'Admin Dashboard', admins_index_path%></a></li>
-             <% else %>
-      <% end %> 
-          </ul>
+          <li class="nav-item">
+        <!-- Display link to edit profile page--> 
+          <a class="nav-link"><%= link_to 'Edit Profile', edit_user_registration_path%></a>
         </li>
+          <li class="nav-item">
+        <!-- Call end current session--> 
+          <a class="nav-link"><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a>
+        </li>
+          <li class="nav-item">
+         <!-- Display link to admin dashboard page--> 
       <% else %> 
           <li class="nav-item">
           <!-- Display link to sign in page--> 
@@ -56,11 +52,11 @@
         </li>
          <li class="nav-item">
           <!-- Display link to sign up page--> 
-          <a class="nav-link"><%= link_to "Sign up", new_user_registration_path%></a>
+          <a class="nav-link"><%= link_to "Sign Up", new_user_registration_path%></a>
         </li>
       </ul>
       <% end %>  
     </div>
   </div>
 </nav>
-
+   

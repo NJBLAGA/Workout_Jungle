@@ -31,6 +31,9 @@
   </ol>  
   <!-- If user is not signed in -->
     <% if user_signed_in? %>
+    <!-- Display all listings/my listing buttons -->
+    <button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to 'All Listings', listings_path%></button>
+        <button type="button" class="btn btn-primary btn-sm" id="bootstrap-overrides4"><%= link_to 'My Listings', own_listing_path%></button>
 <br>
 <br>
 <% else %> 
