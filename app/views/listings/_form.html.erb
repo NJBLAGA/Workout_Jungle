@@ -3,6 +3,9 @@
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
 <div class="form-inputs" id="new12">
+  Make sure all fields have been completed before submitting.
+  <br>
+  <br>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>
@@ -15,6 +18,7 @@
 <br>
   <%= f.input_field :condition, collection: Listing::CONDITION, prompt: "Condition" %>
   <%= f.input_field :listing_type, collection: Listing::LISTING_TYPES, prompt: "Listing Type" %>
+  <br>
 </div>
 <div id="newl6">
 <br>

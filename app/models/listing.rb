@@ -12,9 +12,9 @@ has_many :line_items
   #Fields must have data when user submits the listing
   validates :title, :condition, :price, :listing_type, :image, presence: true
   #Following fields have length restrictions
-  validates :description, length: { maximum: 1000, too_long: "%{count} characters is the maximum allowed. "}
-  validates :title, length: { maximum: 25, too_long: "%{count} characters is the maximum allowed. "}
-  validates :price, length: { maximum: 7 }
+  validates :description, length: { maximum: 1000, too_long: "- %{count} characters is the maximum allowed. "}
+  validates :title, length: { maximum: 25, too_long: "- %{count} characters is the maximum allowed. "}
+  validates :price, length: { maximum: 7, too_long: "- %{count} digits is the maximum allowed. " }
 
   #Shorthand array that contains all conidtions and listing types
   CONDITION = %w{ New Excellent Mint Used Fair Poor }

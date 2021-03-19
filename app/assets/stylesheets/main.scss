@@ -245,7 +245,7 @@ bootstrap-overrides2:hover {
 #mess2 {
     font-size: 1rem;
     font-family: sans-serif;
-    color: rgb(20, 126, 224);
+    color: rgb(63, 209, 27);
     font-weight: bold;
     text-decoration: none;
 }
@@ -589,4 +589,9 @@ img {
     @media only screen and (min-width: 1300px){
         font-size: large;
     }
+}
+
+#prev_mess a {
+font-size: medium;
+font-weight: 800;
 }

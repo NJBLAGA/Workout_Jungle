@@ -3,11 +3,6 @@
 <h1 id='mess1'><%= @conversation.recipient.username %></h1>
   <!-- Link back to conversations page--> 
 <h2 id='mess5'><%= link_to 'Back To Conversations', conversations_path %></h2>
-  <!-- If page has over 10 messages--> 
-<% if @over_ten %>
-  <!-- Display link to previous messages--> 
-  <%= link_to "Show previous", '?m=all', class:'button is-link' %>
-<% end %>
   <!-- Loop through messages--> 
 <% @messages.each do |message| %>
   <!-- If message has body--> 
@@ -21,6 +16,12 @@
   <% end %>
 <% end %>
 <hr>
+ <!-- If page has over 10 messages--> 
+<% if @over_ten %>
+ <!-- Display link to previous messages--> 
+ <div id="prev_mess"><%= link_to "Show Previous Messages", '?m=all'%></div>
+<% end %>
+<br>
 <div class="input-group" id='mess4'>
   <!-- Message input form field--> 
   <span class="input-group-text"><%= form_for [@conversation, @message] do |f| %>
