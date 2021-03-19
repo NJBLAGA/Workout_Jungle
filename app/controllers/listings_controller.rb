@@ -6,9 +6,9 @@ class ListingsController < ApplicationController
   # GET /listings or /listings.json
   def index
     if(params.has_key?(:listing_type))
-      @listings = Listing.where(listing_type: params[:listing_type]).order("created_at desc")
+      @listings = Listing.where(listing_type: params[:listing_type]).order("created_at desc").includes(:user)
     else
-      @listings = Listing.all.order("created_at desc")
+      @listings = Listing.all.order("created_at desc").includes(:user)
     end
   end
 
@@ -17,7 +17,7 @@ class ListingsController < ApplicationController
 def own
   #Current_user from devise
   if(params.has_key?(:listing_type))
-    @listings = current_user.listings.where(listing_type: params[:listing_type]).order("created_at desc")
+    @listings = current_user.listings.where(listing_type: params[:listing_type]).order("created_at desc").includes(:user)
   else
     @listings = current_user.listings
   end

@@ -8,7 +8,7 @@
 
 
 user = User.new(
-    id: 1,
+    id: 95,
     username: "Admin1",
     email: "admin1@admin.com",
     password: "1234567",
@@ -18,7 +18,7 @@ user = User.new(
   user.save!
 
   user = User.new(
-    id: 2,
+    id: 96,
     username: "Admin2",
     email: "admin2@admin.com",
     password: "1234567",
@@ -28,7 +28,7 @@ user = User.new(
   user.save!
 
   user = User.new(
-    id: 3,
+    id: 97,
     username: "James",
     email: "james@example.com",
     password: "password123",
@@ -67,7 +67,7 @@ user = User.new(
     barbell.save
 
     user = User.new(
-      id: 4,
+      id: 98,
       username: "Kane",
       email: "kane@example.com",
       password: "password123",
@@ -106,7 +106,7 @@ user = User.new(
     ez_curl_bar.save
 
     user = User.new(
-      id: 5,
+      id: 99,
       username: "Kelly",
       email: "kelly@example.com",
       password: "password123",
@@ -145,7 +145,7 @@ user = User.new(
     tricep_bar.save
 
     user = User.new(
-      id: 6,
+      id: 100,
       username: "Mitch",
       email: "mitch@example.com",
       password: "password123",
