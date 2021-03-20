@@ -1,8 +1,6 @@
 # Workout Jungle README
 
-# NathanBlaga_T2A2
-
-## **Marketplace Project - Workout Jungle**
+## Nathan Blaga_T2A2 -vMarketplace Project - Workout Jungle
 
 ### **Workout Jungle URL: https://workout-jungle.herokuapp.com**
 
@@ -22,9 +20,7 @@ Once there, clone it down to your local machine.
 
 Once installed, open the project in any text editor and navigate to the Gemfile.
 
-By default the project will be running ```ruby version 2.7.2``` and ```rails version 6.0.3.5```, as shown below:
-
-![Workout Jungle Wireframes - Home Page](./docs/img/gem_file_1.png)
+By default the project will be running ```ruby version 2.7.2``` and ```rails version 6.0.3.5```
 
 It is recommended that this project is run with rails version 6 +.
 
@@ -128,10 +124,6 @@ rails s
 ```
 
 Open a new browser, and type the following: ```localhost:3000```.
-
-If successful, you should see the following:
-
-![Workout Jungle Screenshot](./docs/img/sc_home_page.png)
 
 Log In(seeded usernames and passwords can be found in the ```seeds.rb``` file within the ```db``` folder of the project) or Sign Up with a new account.
 
