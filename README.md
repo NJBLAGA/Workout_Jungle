@@ -1,6 +1,6 @@
 # Workout Jungle README
 
-## Nathan Blaga_T2A2 -vMarketplace Project - Workout Jungle
+## Nathan Blaga_T2A2 - Marketplace Project - Workout Jungle
 
 ### **Workout Jungle URL: https://workout-jungle.herokuapp.com**
 
